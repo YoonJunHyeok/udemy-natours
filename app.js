@@ -45,6 +45,8 @@ const app = express();
 - For administrators, implement all the "Manage" pages, where they can CRUD tours, users, reviews and bookings.
 */
 
+app.enable('trust proxy');
+
 app.set('view engine', 'pug');
 app.set('views', path.join(__dirname, 'views'));
 
