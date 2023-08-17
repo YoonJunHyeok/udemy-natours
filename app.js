@@ -56,7 +56,17 @@ app.use(express.static(path.join(__dirname, 'public')));
 // Set security HTTP headers
 
 app.use(cors());
+// Acces-Control-Allow-Origin *
+// api.natours.com, frontend: natours.com
+// app.use(
+//   cors({
+//     origin: 'https://www.natours.com',
+//   }),
+// );
+
+// allow complex requests like patch, delete
 app.options('*', cors());
+// app.options('/api/v1/tours/:id', cors());
 
 app.use(
   helmet({
