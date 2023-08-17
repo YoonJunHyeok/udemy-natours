@@ -9,9 +9,10 @@
   "targets": {
     "main": false
   },
-  "browserslist": "last 2 versions",
+  "browserslist": "> 0.5%, last 2 versions, not dead",
   "scripts": {
-    "start": "nodemon server.js",
+    "start": "node server.js",
+    "start:dev": "nodemon server.js",
     "start:prod": "SET NODE_ENV=production&&nodemon server.js",
     "debug": "ndb server.js",
     "watch:js": "parcel watch --no-hmr ./public/js/index.js --dist-dir ./public/js/bundled",

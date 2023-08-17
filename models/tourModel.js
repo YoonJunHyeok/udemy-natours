@@ -167,10 +167,10 @@ tourSchema.pre(/^find/, function (next) {
   next();
 });
 
-tourSchema.post(/^find/, function (_, next) {
-  console.log(`Query took ${Date.now() - this.start}ms!`);
-  next();
-});
+// tourSchema.post(/^find/, function (_, next) {
+//   console.log(`Query took ${Date.now() - this.start}ms!`);
+//   next();
+// });
 
 // AGGREGATION MIDDLEWARE
 // this object points to the current aggregation object
